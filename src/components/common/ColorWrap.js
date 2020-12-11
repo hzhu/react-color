@@ -16,11 +16,13 @@ export const ColorWrap = (Picker) => {
       }, 100)
     }
 
-    static getDerivedStateFromProps(nextProps, state) {
-      return {
-        ...color.toState(nextProps.color, state.oldHue),
-      }
-    }
+    // Delete this
+    // See: https://github.com/casesandberg/react-color/pull/791#issuecomment-742617695
+    // static getDerivedStateFromProps(nextProps, state) {
+    //   return {
+    //     ...color.toState(nextProps.color, state.oldHue),
+    //   }
+    // }
 
     handleChange = (data, event) => {
       const isValidColor = color.simpleCheckForValidColor(data)
